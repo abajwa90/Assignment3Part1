@@ -10,18 +10,18 @@ namespace Assignment3Part1.Controllers
     public class TeachersController : Controller
     {
         // GET: Teachers
-        public ActionResult List(string SearchKey = null)
+        public ActionResult SearchTeachers(string SearchKey = null)
         {
             List<Teacher> teachersList = new List<Teachers> ();
             
-            TeacherDataController controller = new TeacherDataController ();
+            TeacherDataController controller = new TeacherDataController();
 
             teachersList = (List<Teachers>)Controller.ListTeachers(SearchKey);
 
             return View(teachersList);
         }
         //GET: Teacher/Show/{TeacherID}]
-        public ActionResult Show(int id)
+        public ActionResult ShowTeacher(int id)
         {
             TeacherDataController controller = new TeacherDataController();
 
